@@ -237,6 +237,26 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+.main-content,
+.banner-mine {
+    float: right;
+    width: 77%;
+}
+
+@media screen and (max-width: 1290px) {
+    .main-content,
+    .banner-mine {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-content,
+    .banner-mine {
+        width: 100%;
+    }
+}
+
 .content-wrapper {
   padding: 0 80px;
 }
@@ -428,6 +448,16 @@ h3.profile-title {
   background-position: center;
   background-size: cover;
   z-index: 2;
+}
+
+.banner-mine {
+    padding: 50px 80px;
+    position: relative;
+    background: #006699;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
 }
 
 .banner-overlay {
