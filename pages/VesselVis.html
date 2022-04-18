@@ -64,8 +64,15 @@
             <ul class="navigation">
                 <li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
                 <li><a href="#basicShade">Basic Shading</a></li>
-                <li><a href="#Chromadepth">Chromadepth</a></li>
+                <li><a href="#Wireframe">Wire frame model</a></li>
                 <li><a href="#Fresnel">Fresnel</a></li>
+                <li><a href="#Frosted">Frosted</a></li>
+                <li><a href="#Chromadepth">Chromadepth</a></li>
+                <li><a href="#Outline">Outline</a></li>
+                <li><a href="#Hatching">Hatching</a></li>
+                <li><a href="#Projection">Shadow Projection</a></li>
+                <li><a href="VesselApp.html">Try the WebGL App</a></li>
+
             </ul>
         </div> <!-- .main-navigation -->
     </div> <!-- .sidebar-menu -->
@@ -96,7 +103,7 @@
                                 Illustrative visualization methods try to improve spatial relations and depth and shape perception of an object by encoding differnet perception cues into outstanding features in shading options or additional augmentations.
                             </p>
                             <p>
-                                asiodhasokdhas
+                                Try the visualization methods in a WebGL application <a href="VesselApp.html">here</a>.
                             </p>
                             <hr>
                         </div>
@@ -120,22 +127,20 @@
                     </div> <!-- .projects-holder -->
                 </div>
 
-                <div class="page-section" id="Chromadepth">
+                <div class="page-section" id="Wireframe">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="widget-title">Chromadepth</h4>
-                            <p>The depth is encoded as color.</p>
+                            <h4 class="widget-title">wire frame model</h4>
+                            <p>The vessel rendered as wire frame model, i.e. only edges of the model are shown. In this case, the edges are the connection of the model's vertices. </p>
                         </div>
                     </div>
                     <div class="row projects-holder">
                         <div class="col-md-4 col-sm-6">
                             <div class="project-item">
-                                <img src="../img/Chromadepth4k.png" alt="">
+                                <img src="../img/wireframeReduced4k.png" alt="">
                             </div>
                         </div>
-
                     </div>
-
                 </div>
 
                 <div class="page-section" id="Fresnel">
@@ -154,94 +159,96 @@
                     </div>
                 </div>
 
-                <div class="page-section" id="Rest">
+                <div class="page-section" id="Frosted">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="widget-title">Basic Shaded Model</h4>
-                            <p>Images of visualization methods. All images were created by myself.</p>
+                            <h4 class="widget-title">Frosted</h4>
+                            <p>The transparency of the object is dependent on the depth.</p>
                         </div>
                     </div>
-
-
-                    <div class="col-md-4 col-sm-6">
-                        <div class="project-item">
-                            <img src="../img/Frosted6,7_4k.png" alt="">
-                            <div class="project-hover">
-                                <div class="inside">
-                                    <h5><a href="#">Frosted Effect</a></h5>
-                                    <p>The transparency of the object is dependent on the depth.</p>
-                                </div>
+                    <div class="row projects-holder">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="../img/Frosted6,7_4k.png" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="project-item">
-                            <img src="../img/Hatching4k.png" alt="">
-                            <div class="project-hover">
-                                <div class="inside">
-                                    <h5><a href="#">Hatching</a></h5>
-                                    <p>A computer generated hatching of an objects. Resembles a hand drawn object.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                        <div class="project-item">
-                            <img src="../img/Outline4k.png" alt="">
-                            <div class="project-hover">
-                                <div class="inside">
-                                    <h5><a href="#">Outline</a></h5>
-                                    <p>Shows only the outline of the model.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="project-item">
-                            <img src="../img/ProjectionsColor4k.png" alt="">
-                            <div class="project-hover">
-                                <div class="inside">
-                                    <h5><a href="#">Projection Method</a></h5>
-                                    <p>Projects a shadow of the object onto augmented walls.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="project-item">
-                            <img src="../img/wireframeReduced4k.png" alt="">
-                            <div class="project-hover">
-                                <div class="inside">
-                                    <h5><a href="#">Wireframe</a></h5>
-                                    <p>The object rendered as wireframe object.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- .projects-holder -->
-            </div>
-                    <hr>
-                    <!-- Contact -->
-                    <div class="page-section" id="contact">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h4 class="widget-title">Contact Infos</h4>
-                                <p>E-Mail: f.merkl@tum.de</p>
-                                <hr>
-                            </div>
-                        </div> <!-- #about -->
-                    </div>
-
-                    <div class="row" id="footer">
-                        <div class="col-md-12 text-center">
-                            <p class="copyright-text">Copyright &copy; 2022 Felix Merkl</p>
-                        </div>
-                    </div>
-
                 </div>
 
+                <div class="page-section" id="Chromadepth">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Chromadepth</h4>
+                            <p>The depth is encoded as color.</p>
+                        </div>
+                    </div>
+                    <div class="row projects-holder">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="../img/Chromadepth4k.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-section" id="Outline">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Outline</h4>
+                            <p>Shows only the silhouette of the model.</p>
+                        </div>
+                    </div>
+                    <div class="row projects-holder">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="../img/Outline4k.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-section" id="Hatching">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Hatching</h4>
+                            <p>A computer generated hatching of an objects. Resembles a hand drawn object.</p>
+                        </div>
+                    </div>
+                    <div class="row projects-holder">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="../img/Hatching4k.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-section" id="Projection">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Shadow Projection</h4>
+                            <p>Two walls as auxiliary augmentations are used as projection planes for a virtual shadow of the object.</p>
+                        </div>
+                    </div>
+                    <div class="row projects-holder">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="../img/ProjectionsColor4k.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" id="footer">
+                <div class="col-md-12 text-center">
+                    <p class="copyright-text">Felix Merkl | f.merkl@tum.de</p>
+                </div>
+            </div>
+
         </div>
+
     </div>
 
     <script src="js/vendor/jquery-1.10.2.min.js"></script>
