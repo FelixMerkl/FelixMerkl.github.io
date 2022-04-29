@@ -118,7 +118,7 @@
                             <p>A normal shaded object with specular highlights and solid color.</p>
                         </div>
                         <div class="enlargeImage">
-                            <img src="../img/Basic.png" onclick="enlargeImg(this)">
+                            <center><img src="../img/Basic.png" onclick="enlargeImg(this)"></center>
                         </div>
 
 
@@ -128,7 +128,7 @@
                             <p>The vessel rendered as wire frame model, i.e. only edges of the model are shown. In this case, the edges are the connection of the model's vertices. </p>
                         </div>
                         <div class="enlargeImage">
-                            <img src="../img/Wireframe_Defined.png" onclick="enlargeImg(this)">
+                            <center><img src="../img/Wireframe_Defined.png" onclick="enlargeImg(this)"></center>
                         </div>
 
 
@@ -137,7 +137,7 @@
                             <p>The transparency of the object is dependent on the normal vectors and the camera perspective.</p>
                         </div>
                         <div class="enlargeImage">
-                            <img src="../img/Fresnel.png" onclick="enlargeImg(this)">
+                            <center><img src="../img/Fresnel.png" onclick="enlargeImg(this)"></center>
                         </div>
 
 
@@ -146,7 +146,7 @@
                             <p>The transparency of the object is dependent on the depth.</p>
                         </div>
                         <div class="enlargeImage">
-                            <img src="../img/Frosted.png" onclick="enlargeImg(this)">
+                            <center><img src="../img/Frosted.png" onclick="enlargeImg(this)"></center>
                         </div>
 
 
@@ -155,7 +155,7 @@
                             <p>The depth is encoded as color.</p>
                         </div>
                         <div class="enlargeImage">
-                            <img src="../img/Chromadepth.png" onclick="enlargeImg(this)">
+                            <center><img src="../img/Chromadepth.png" onclick="enlargeImg(this)"></center>
                         </div>
 
 
@@ -164,7 +164,7 @@
                             <p>Shows only the silhouette of the model.</p>
                         </div>
                         <div class="enlargeImage">
-                            <img src="../img/Outline.png" onclick="enlargeImg(this)">
+                            <center><img src="../img/Outline.png" onclick="enlargeImg(this)"></center>
                         </div>
 
 
@@ -173,7 +173,7 @@
                             <p>A computer generated hatching of an objects. Resembles a hand drawn object.</p>
                         </div>
                         <div class="enlargeImage">
-                            <img src="../img/Hatching_Black.png" onclick="enlargeImg(this)">
+                            <center><img src="../img/Hatching_Black.png" onclick="enlargeImg(this)"></center>
                         </div>
 
 
@@ -182,7 +182,7 @@
                             <p>Two walls as auxiliary augmentations are used as projection planes for a virtual shadow of the object.</p>
                         </div>
                         <div class="enlargeImage">
-                            <img src="../img/Projection_GreyWalls.png" onclick="enlargeImg(this)">
+                            <center><img src="../img/Projection_GreyWalls.png" onclick="enlargeImg(this)"></center>
                         </div>
 
 
@@ -190,7 +190,7 @@
                 </div>
 
             </div>
-
+            <hr>
             <div class="row" id="footer">
                 <div class="col-md-12 text-center">
                     <p class="copyright-text">Felix Merkl | f.merkl@tum.de</p>
@@ -206,7 +206,7 @@
     <script src="js/min/main.min.js"></script>
     <script>
         function enlargeImg(img) {
-            img.style.transform = "scale(2.5)";
+            img.style.transform = "scale(2)";
             img.style.transition = "transform 0.25s ease";
             img.onclick = function () { normalImg(img) };
         }
