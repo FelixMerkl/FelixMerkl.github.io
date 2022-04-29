@@ -559,6 +559,27 @@ h3.profile-title {
   line-height: 20px;
 }
 
+
+/*------ enlargeImage ------ */
+.enlargeImage {
+    margin-right: 0;
+    margin-left: 50px;
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 0;
+    /*position: relative;*/
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+
+    .enlargeImage img {
+        width: 50%;
+        display: block;
+    }
+
+
 /*------ contact ------ */
 .contact-form {
   margin-top: 40px;
