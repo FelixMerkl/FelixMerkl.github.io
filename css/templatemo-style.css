@@ -566,18 +566,26 @@ h3.profile-title {
     margin-left: 50px;
     margin-top: 0;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     /*position: relative;*/
     position: relative;
-    display: block;
     z-index: 1;
 }
 
 
-    .enlargeImage img {
-        width: 50%;
-        display: block;
-    }
+.enlargeImage img {
+    width: 50%;
+    display: block;
+
+}
+
+.enlargeImage img:hover {
+    border: 1px solid grey;
+}
+
+.enlargeImage:hover{
+    z-index: 3;
+}
 
 
 /*------ contact ------ */
