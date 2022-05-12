@@ -4,7 +4,8 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
- <!--<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +21,7 @@
     <link rel="stylesheet" href="../css/font-awesome.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/templatemo-style.css">
+    <link rel="stylesheet" href="TemplateData/style.css">
     <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -66,12 +68,13 @@
                 <li><a href="#basicShade">Basic Shading</a></li>
                 <li><a href="#Wireframe">Wire frame model</a></li>
                 <li><a href="#Fresnel">Fresnel</a></li>
-                <li><a href="#Frosted">Frosted</a></li>
+                <li><a href="#Fog">Fog</a></li>
                 <li><a href="#Chromadepth">Chromadepth</a></li>
                 <li><a href="#Outline">Outline</a></li>
                 <li><a href="#Hatching">Hatching</a></li>
                 <li><a href="#Projection">Shadow Projection</a></li>
-                <li><a href="vesselApp.html">Try the WebGL App</a></li>
+                <li><a href="#references">References</a></li>
+                <li><a href="vesselApp.html"><div id="unity-webgl-logo"></div>Try the demo</a></li>
 
             </ul>
         </div> <!-- .main-navigation -->
@@ -81,7 +84,7 @@
     <div class="banner-mine" id="top">
         <div class="banner-overlay"></div>
         <div class="welcome-text">
-            <h2>Felix Merkl | Vessel Visualizations (Work in Progress)</h2>
+            <h2>Felix Merkl | Vessel Visualizations</h2>
         </div>
     </div>
 
@@ -96,14 +99,20 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h4 class="widget-title">State of the art vessel visualizations</h4>
-                            <!--<div class="about-image">
-                                <img src="img/8.jpg" alt="about me">
-                            </div> -->
                             <p>
-                                Illustrative visualization methods try to improve spatial relations and depth and shape perception of an object by encoding differnet perception cues into outstanding features in shading options or additional augmentations.
+                                Visualizations for augmented objects are a well researched field to support medical doctors during laprascopic surgeries. In this kind of surgery, three small incisions are made into the patient's body and a camera and instruments are inserted.
+                                This camera captures images of the area of interest and is the only way for the surgeons to see the operation site.
                             </p>
                             <p>
-                                Try the visualization methods in a WebGL application <a href="vesselApp.html">here</a>.
+                                <br />However, the view is very limited, it is very hard to percieve the depth, and blood vessels can be covered by fatty tissue, or organs. This is very dangerous, as accidentally hurting a vessel might cause serious injuries. Therefore, augmented reality can be used to reveal vulnerable structures.
+                            </p>
+                            <p>
+                                <br />Further, different visualization techniques can be applied to the augmented objects to deal with the perception problems. Thus, the main goal is to improve spatial relations and depth and shape perception of an object by encoding
+                                differnet perception cues into outstanding features in shading options or additional augmentations. In general, the features can be categorized into three groups: transparency, illustrative, and auxilliary augmentations.
+                            </p>
+                            <p>
+                                <br /><a href="#Preim">Preim et al. [1]</a> evaluate state of the art visualization methods. As preparation for own research, a selection of popular methods was implemented. This page shows the chosen methods and explains the most important aspects.
+                                You can test the visualization methods in a WebGL application <a href="vesselApp.html" title="try the demo">here</a>.
                             </p>
                             <hr>
                         </div>
@@ -115,7 +124,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h4 class="widget-title" id="basicShade">Basic Shaded Model</h4>
-                            <p>A normal shaded object with specular highlights and solid color.</p>
+                            <p>
+                                This is the standard rendering method for 3D models. It shades the object in a solid, non-transparent colour and sets specular highlights from a virtual light source. This method can be used for medical augmented reality, however, it does not add any cues for depth and shape perception.
+                            </p>
                         </div>
                         <div class="enlargeImage">
                             <center><img src="../img/Basic.png" onclick="enlargeImg(this)"></center>
@@ -125,7 +136,12 @@
 
                         <div class="col-md-12">
                             <h4 class="widget-title" id="Wireframe">wire frame model</h4>
-                            <p>The vessel rendered as wire frame model, i.e. only edges of the model are shown. In this case, the edges are the connection of the model's vertices. </p>
+                            <p>
+                                The wire frame technique does not render the faces of the 3D model, but only the edges - the connections of the model's vertices. This allows to see through the model without changing transparency values and thus see occluded parts.
+                            </p>
+                            <p>
+                                It is also a very common rendering technique that is pre-implemented by most platforms. However, it does not work for WebGL applications created with Unity, so you cannot find it in the demo.
+                            </p>
                         </div>
                         <div class="enlargeImage">
                             <center><img src="../img/Wireframe_Defined.png" onclick="enlargeImg(this)"></center>
@@ -134,7 +150,16 @@
 
                         <div class="col-md-12">
                             <h4 class="widget-title" id="Fresnel">Fresnel</h4>
-                            <p>The transparency of the object is dependent on the normal vectors and the camera perspective.</p>
+                            <p>
+                                With visualization methods in the transparency category, the alpha value of the model is changed. This causes to blend the vessel's color with the color of the background. This helps with occlusion problems and depth perception.
+                                The transparency of the object is dependent on the normal vectors and the camera perspective.
+                            </p>
+                            <p>
+                                With a Fresnel effect, the alpha value changes for each point on the vessel. This alpha value is dependent on the normal vector and the view vector of the camera. As a result, the shape and the outline of the vessel are emphasized.
+                            </p>
+                            <p>
+                                <br />Ostendorf et al. [2] investigated the Fresnel effect and similar methods.
+                            </p>
                         </div>
                         <div class="enlargeImage">
                             <center><img src="../img/Fresnel.png" onclick="enlargeImg(this)"></center>
@@ -142,17 +167,21 @@
 
 
                         <div class="col-md-12">
-                            <h4 class="widget-title" id="Frosted">Frosted</h4>
-                            <p>The transparency of the object is dependent on the depth.</p>
+                            <h4 class="widget-title" id="Fog">Fog</h4>
+                            <p>
+                                The fog effect changes the alpha value based on the distance to the camera (image depth). As important parts are mostly in the center and in the foreground of the image, this effect focuses on interesting parts and partly excludes unnecessary areas.
+                            </p>
                         </div>
                         <div class="enlargeImage">
-                            <center><img src="../img/Frosted.png" onclick="enlargeImg(this)"></center>
+                            <center><img src="../img/Fog.png" onclick="enlargeImg(this)"></center>
                         </div>
 
 
                         <div class="col-md-12">
                             <h4 class="widget-title" id="Chromadepth">Chromadepth</h4>
-                            <p>The depth is encoded as color.</p>
+                            <p>
+                                In illustrative methods, mostly the color of the object is changed. The chromadepth technique computes the depth of the images and maps the depth value to a color. This change of color gives the viewer an easy understanding of the depth of the object.
+                            </p>
                         </div>
                         <div class="enlargeImage">
                             <center><img src="../img/Chromadepth.png" onclick="enlargeImg(this)"></center>
@@ -161,7 +190,9 @@
 
                         <div class="col-md-12">
                             <h4 class="widget-title" id="Outline">Outline</h4>
-                            <p>Shows only the silhouette of the model.</p>
+                            <p>
+                                Illustrative methods don't always add to the objects. As sometimes, the objects do not add much to the scene, a simplistic view might be better suited. The outline only shows the silhouette and removes any features.
+                            </p>
                         </div>
                         <div class="enlargeImage">
                             <center><img src="../img/Outline.png" onclick="enlargeImg(this)"></center>
@@ -170,7 +201,12 @@
 
                         <div class="col-md-12">
                             <h4 class="widget-title" id="Hatching">Hatching</h4>
-                            <p>A computer generated hatching of an objects. Resembles a hand drawn object.</p>
+                            <p>
+                                As the outline might be too simple, it is possible to remain some features to help with the shape perception. The features can be drawn as as small hatches that resemble hand drawn shadows. 
+                            </p>
+                            <p>
+                                <br />This implementation is inspired by the work from Ritter et al. [3].
+                            </p>
                         </div>
                         <div class="enlargeImage">
                             <center><img src="../img/Hatching_Black.png" onclick="enlargeImg(this)"></center>
@@ -179,46 +215,122 @@
 
                         <div class="col-md-12">
                             <h4 class="widget-title" id="Projection">Shadow Projection</h4>
-                            <p>Two walls as auxiliary augmentations are used as projection planes for a virtual shadow of the object.</p>
+                            <p>
+                                All before mentioned methods only change features of the vessel itself. However with auxilliary augmentations, it is possible to add more virtual objects into the augmentation.
+                            </p>
+                            <p>
+                                For example, two walls can be used as projection planes for a virtual shadow of the object. These extra perspectives onto the model can help to further understand its shape and depth.
+                            </p>
+                            <p>
+                                This implementation is inspired by the work from Lawonn et al. [4].
+                            </p>
                         </div>
                         <div class="enlargeImage">
                             <center><img src="../img/Projection_GreyWalls.png" onclick="enlargeImg(this)"></center>
                         </div>
 
+                        <div class="col-md-12">
+                            <h4 class="widget-title" id="combination">Combination is key</h4>
+                            <p>
+                                Each of the visualization can help to improve the perception of augmented objects. However, they each focus on either on depth or shape perception. Therefore, it is common practice to combine two or more visualization techniques. For example hatching with chromadepth and projections with chromadepth.
+                            </p>
+
+                        </div>
+                        <div class="enlargeImage">
+                            <center><img src="../img/Hatching_Color.png" onclick="enlargeImg(this)"></center>
+                        </div>
+                        <div class="enlargeImage">
+                            <center><img src="../img/Projection.png" onclick="enlargeImg(this)"></center>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <h4 class="widget-title" id="webGL">Try the Demo</h4>
+                            <p>You can test the the visualization methods in a WebGL application created with Unity in the browser. You can change between the methods and rotate the vessel to take a better look from other perspectives.</p>
+                            <p> <br /></p>
+                            <center><a href="vesselApp.html" class="button"><div id="unity-webgl-logo"></div>Try the demo</a></center>
+                        </div>
+
+
+
 
                     </div>
                 </div>
+                <hr />
+
+                <div class="page-section" id="references">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">References</h4>
+
+                            <div class="csl-bib-body" style="line-height: 1.35; ">
+                                <div class="csl-entry" style="clear: left; ">
+                                    <div class="csl-left-margin" id="Preim" style="float: left; padding-right: 0.5em;text-align: right; width: 1em;">[1]</div><div class="csl-right-inline" style="margin: 0 .4em 0 1.5em;">
+                                        B. Preim, A. Baer, D. Cunningham, T. Isenberg, and T. Ropinski,
+                                        ‘A Survey of Perceptually Motivated 3D Visualization of Medical Image Data’, <i>Computer Graphics Forum</i>, vol. 35, no. 3, pp. 501–525, Jun. 2016, doi: <a href="https://doi.org/10.1111/cgf.12927" target="_blank">10.1111/cgf.12927</a>.
+                                    </div>
+                                </div>
+                                <span class="Z3988" title="Preim et al."></span>
+
+                                <div class="csl-entry" style="clear: left; ">
+                                    <div class="csl-left-margin" id="Ostendorf" style="float: left; padding-right: 0.5em;text-align: right; width: 1em;">[2]</div><div class="csl-right-inline" style="margin: 0 .4em 0 1.5em;">
+                                        K. Ostendorf <i>et al.</i>,
+                                        ‘Shading Style Assessment for Vessel Wall and Lumen Visualization’, <i>Eurographics Workshop on Visual Computing for Biology and Medicine</i>, p. 5 pages, 2021, doi: <a href="https://doi.org/10.2312/VCBM.20211350" target="_blank">10.2312/VCBM.20211350</a>.
+                                    </div>
+                                </div>
+                                <span class="Z3988" title="Ostendorf et al."></span>
+
+                                <div class="csl-entry" style="clear: left; ">
+                                    <div class="csl-left-margin" style="float: left; padding-right: 0.5em;text-align: right; width: 1em;">[3]</div><div class="csl-right-inline" style="margin: 0 .4em 0 1.5em;">
+                                        F. Ritter, C. Hansen, V. Dicken, O. Konrad, B. Preim, and H. Peitgen,
+                                        ‘Real-Time Illustration of Vascular Structures’, <i>IEEE Trans. Visual. Comput. Graphics</i>, vol. 12, no. 5, pp. 877–884, Sep. 2006, doi: <a href="https://doi.org/10.1109/TVCG.2006.172" target="_blank">10.1109/TVCG.2006.172</a>.
+                                    </div>
+                                </div>
+                                <span class="Z3988" title="Ritter et al."></span>
+
+                                <div class="csl-entry" style="clear: left; ">
+                                    <div class="csl-left-margin" style="float: left; padding-right: 0.5em;text-align: right; width: 1em;">[4]</div><div class="csl-right-inline" style="margin: 0 .4em 0 1.5em;">K. Lawonn, M. Luz, B. Preim, and C. Hansen, 
+                                    Illustrative Visualization of Vascular Models for Static 2D Representations’, in <i>Medical Image Computing and Computer-Assisted Intervention -- MICCAI 2015</i>, vol. 9350, N. Navab, J. Hornegger, W. M. Wells, and A. Frangi, Eds. Cham: Springer International Publishing, 
+                                    2015, pp. 399–406. doi: <a href="https://doi.org/10.1007/978-3-319-24571-3_48" target="_blank">10.1007/978-3-319-24571-3_48</a>.</div>
+                                </div>
+                                <span class="Z3988" title="Lawonn et al."></span>
+
+
+                            </div>
+                        </div>
+                    </div> <!-- #about -->
+                </div>
 
             </div>
-            <hr>
-            <div class="row" id="footer">
-                <div class="col-md-12 text-center">
-                    <p class="copyright-text">Felix Merkl | f.merkl@tum.de</p>
-                </div>
-            </div>
+<hr>
+<div class="row" id="footer">
+    <div class="col-md-12 text-center">
+        <p class="copyright-text">Felix Merkl | f.merkl@tum.de</p>
+    </div>
+</div>
 
         </div>
 
     </div>
 
-    <script src="js/vendor/jquery-1.10.2.min.js"></script>
-    <script src="js/min/plugins.min.js"></script>
-    <script src="js/min/main.min.js"></script>
-    <script>
-        function enlargeImg(img) {
-            img.style.transform = "scale(2)";
-            img.style.transition = "transform 0.25s ease";
-            img.onclick = function () { normalImg(img) };
-        }
-    </script>
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/min/plugins.min.js"></script>
+<script src="js/min/main.min.js"></script>
+<script>
+    function enlargeImg(img) {
+        img.style.transform = "scale(2)";
+        img.style.transition = "transform 0.25s ease";
+        img.onclick = function () { normalImg(img) };
+    }
+</script>
 
-    <script>
-        function normalImg(img) {
-            img.style.transform = "scale(1)";
-            img.style.transition = "transform 0.25s ease";
-            img.onclick = function () { enlargeImg(img) };
-        }
-    </script>
+<script>
+    function normalImg(img) {
+        img.style.transform = "scale(1)";
+        img.style.transition = "transform 0.25s ease";
+        img.onclick = function () { enlargeImg(img) };
+    }
+</script>
 
 </body>
 </html>
