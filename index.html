@@ -83,7 +83,7 @@
         <div class="banner-overlay"></div>
         <div class="welcome-text">
             <h2>Felix Merkl | Personal Website</h2>
-            <h5>Projects and publications</h5>
+            <h5>projects and publications</h5>
         </div>
     </div>
 
@@ -99,19 +99,19 @@
                         <div class="col-md-12">
                             <h4 class="widget-title">Learn About Me</h4>
                             <!--<div class="about-image">
-                    <img src="img/8.jpg" alt="about me">
-                </div> -->
+                                <img src="img/8.jpg" alt="about me">
+                            </div> -->
                             <p>
-                                Currently, I am working at the TUM (Technische Universität München) as research assistant. In the scope of my Master's Thesis, I created new visualization techniques for medical augmented reality applications.
-                                They focus on improving depth and shape perception for medical doctors during a minimal invasive surgery by enhacing features of the vessel. For evaluation, the techniques are compared to <a href="#knownVis" rel="nofollow">state of the art visualization techniques</a>.
+                                Currently, I am working at the TUM (Technische Universität München) as research assistant. In my Master's Thesis, I created new visualization techniques for medical augmented reality applications.
+                                They focus on improving depth and shape perception for medical doctors during a minimal invasive surgery by enhacing features of the vessel. For evaluation, the techniques are compared to <a href="#knownVis" rel="nofollow">state-of-the-art visualization techniques</a>.
                             </p>
                             <p>
                                 <br />A small prestudy indicated promising effects and therefore, I have the opportunity to keep working at the project as research assistant. The goal is to elaborate the study design, conduct an in-depth study, and publish the results in a scientific paper.
                                 Until then, I unfortunately cannot show any results on this page.
                             </p>
                             <p>
-                                <br />The resulting system has five different visualizations implemented, three state of the art methods and two own created. The system is used during a laprascopic surgery. It takes the camera image, tracking data from the patient and instrument and creates an augmented reality
-                                with a real world surgery image and correctly placed virtual vessels. These vessels are rendered with a visualization method that the surgeons can select. 
+                                <br />The resulting system has five different visualizations implemented: three state-of-the-art methods and two own created. The system is used during a laprascopic surgery. It takes the camera image, tracking data from the patient and instrument, and creates an augmented reality
+                                with a real-world surgery image and correctly placed virtual vessels. These vessels are rendered with a visualization method that the surgeons can select.
                             </p>
 
                             <hr>
@@ -128,7 +128,7 @@
                                 In minimal-invasive surgery, it is crucial for the surgeons to be aware of hidden structures. Blood vessels, for example, can be covered by tissue, organs, and fat. Therefore, augmented reality is used to visualize the hidden blood vessels and project them onto the real world image.
                             </p>
                             <p>
-                                <br />Visualization techniques are used to further improve shape and depth perception. Most methods are illustrative and add perception cues in the form of color, transparency, and feature enhancement. The following pictures show a selection of state of the art visualization methods.
+                                <br />Visualization techniques are used to further improve shape and depth perception. Most methods are illustrative and add perception cues in the form of color, transparency, and feature enhancement. The following pictures show a selection of state-of-the-art visualization methods.
                                 <a href="pages/VesselVis.html" title="Learn more">Learn more</a> about the functionality and implementation of the most common techniques.
                             </p>
                         </div>
@@ -235,7 +235,18 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h4 class="widget-title">Contact Infos</h4>
-                            <p>E-Mail: f.merkl@tum.de</p>
+                            
+                                <script>
+                                   
+                                        var part1 = "f.merkl";
+                                        var part2 = Math.pow(2, 6);
+                                        var part3 = String.fromCharCode(part2);
+                                        var part4 = "tum.de"
+                                        var part5 = part1 + String.fromCharCode(part2) + part4;
+                                        document.write("<a href=" + "mai" + "lto" + ":" + part5 + " > " + part1 + part3 + part4 + "</a >");
+                                           
+                                </script>
+                            
                             <p>LinkedIn: <a href="https://www.linkedin.com/in/felix-merkl/" target="_blank" title="LinkedIn profile">Felix Merkl</a></p>
                         </div>
                     </div> <!-- #about -->
@@ -244,7 +255,16 @@
 
                 <div class="row" id="footer">
                     <div class="col-md-12 text-center">
-                        <p class="copyright-text">Felix Merkl | f.merkl@tum.de</p>
+                        <p class="copyright-text">Felix Merkl | <script>
+
+                                                                    var part1 = "f.merkl";
+                                                                    var part2 = Math.pow(2, 6);
+                                                                    var part3 = String.fromCharCode(part2);
+                                                                    var part4 = "tum.de"
+                                                                    var part5 = part1 + String.fromCharCode(part2) + part4;
+                                                                    document.write("" + part5 );
+
+                                                                </script></p>
                     </div>
                 </div>
 
@@ -256,6 +276,8 @@
     <script src="js/vendor/jquery-1.10.2.min.js"></script>
     <script src="js/min/plugins.min.js"></script>
     <script src="js/min/main.min.js"></script>
+
+
 
 </body>
 </html>

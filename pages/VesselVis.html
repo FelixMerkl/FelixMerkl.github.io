@@ -107,8 +107,8 @@
                                 <br />However, the view is very limited, it is very hard to percieve the depth, and blood vessels can be covered by fatty tissue, or organs. This is very dangerous, as accidentally hurting a vessel might cause serious injuries. Therefore, augmented reality can be used to reveal vulnerable structures.
                             </p>
                             <p>
-                                <br />Further, different visualization techniques can be applied to the augmented objects to deal with the perception problems. Thus, the main goal is to improve spatial relations and depth and shape perception of an object by encoding
-                                differnet perception cues into outstanding features in shading options or additional augmentations. In general, the features can be categorized into three groups: transparency, illustrative, and auxilliary augmentations.
+                                <br />Further, different visualization techniques can be applied to the augmented objects to deal with perception problems. Thus, the main goal is to improve spatial relations and depth and shape perception of an object by encoding
+                                different perception cues into outstanding features in shading options or additional augmentations. In general, the features can be categorized into three groups: transparency, illustrative, and auxilliary augmentations.
                             </p>
                             <p>
                                 <br /><a href="#Preim">Preim et al. [1]</a> evaluate state of the art visualization methods. As preparation for own research, a selection of popular methods was implemented. This page shows the chosen methods and explains the most important aspects.
@@ -125,7 +125,7 @@
                         <div class="col-md-12">
                             <h4 class="widget-title" id="basicShade">Basic Shaded Model</h4>
                             <p>
-                                This is the standard rendering method for 3D models. It shades the object in a solid, non-transparent colour and sets specular highlights from a virtual light source. This method can be used for medical augmented reality, however, it does not add any cues for depth and shape perception.
+                                This is the standard rendering method for 3D models. It shades the object in a solid, non-transparent color and sets specular highlights from a virtual light source. This method can be used for medical augmented reality, however, it does not add any cues for depth and shape perception.
                             </p>
                         </div>
                         <div class="enlargeImage">
@@ -138,8 +138,6 @@
                             <h4 class="widget-title" id="Wireframe">wire frame model</h4>
                             <p>
                                 The wire frame technique does not render the faces of the 3D model, but only the edges - the connections of the model's vertices. This allows to see through the model without changing transparency values and thus see occluded parts.
-                            </p>
-                            <p>
                                 It is also a very common rendering technique that is pre-implemented by most platforms. However, it does not work for WebGL applications created with Unity, so you cannot find it in the demo.
                             </p>
                         </div>
@@ -191,7 +189,7 @@
                         <div class="col-md-12">
                             <h4 class="widget-title" id="Outline">Outline</h4>
                             <p>
-                                Illustrative methods don't always add to the objects. As sometimes, the objects do not add much to the scene, a simplistic view might be better suited. The outline only shows the silhouette and removes any features.
+                                Illustrative methods do not always add to the objects. As sometimes, the objects do not add much to the scene, a simplistic view might be better suited. The outline only shows the silhouette and removes any features.
                             </p>
                         </div>
                         <div class="enlargeImage">
@@ -202,7 +200,7 @@
                         <div class="col-md-12">
                             <h4 class="widget-title" id="Hatching">Hatching</h4>
                             <p>
-                                As the outline might be too simple, it is possible to remain some features to help with the shape perception. The features can be drawn as small hatches that resemble hand drawn shadows and are dependent on the camera view. That means for each perspective, different strokes are drawn that 
+                                As the outline might be too simple, it is possible to retain some features to help with the shape perception. The features can be drawn as small hatches that resemble hand drawn shadows and are dependent on the camera view. That means for each perspective different strokes are drawn that 
                                 emphasize difficult shapes.
                             </p>
                             <p>
@@ -218,8 +216,6 @@
                             <h4 class="widget-title" id="Projection">Shadow Projection</h4>
                             <p>
                                 All before mentioned methods only change features of the vessel itself. However with auxilliary augmentations, it is possible to add more virtual objects into the augmentation.
-                            </p>
-                            <p>
                                 For example, two walls can be used as projection planes for a virtual shadow of the object. These extra perspectives onto the model can help to further understand its shape and depth.
                             </p>
                             <p>
@@ -233,21 +229,21 @@
                         <div class="col-md-12">
                             <h4 class="widget-title" id="combination">Combination is key</h4>
                             <p>
-                                Each of the visualization can help to improve the perception of augmented objects. However, they each focus on either on depth or shape perception. Therefore, it is common practice to combine two or more visualization techniques. For example hatching with chromadepth and projections with chromadepth.
+                                Each of the visualization can help to improve the perception of augmented objects. However, they each focus on either depth or shape perception. Therefore, it is common practice to combine two or more visualization techniques. For example hatching with chromadepth or projections with chromadepth.
                             </p>
 
                         </div>
                         <div class="enlargeImage">
-                            <center><img src="../img/Hatching_Color.png" onclick="enlargeImg(this)"></center>
+                            <center><img src="../img/Hatching_Color.png" onclick="enlargeImg(this)" alt="Chromadepth combined with Hatches."></center>
                         </div>
                         <div class="enlargeImage">
-                            <center><img src="../img/Projection.png" onclick="enlargeImg(this)"></center>
+                            <center><img src="../img/Projection.png" onclick="enlargeImg(this)" alt="Chromadepth combined with projection."></center>
                         </div>
 
 
                         <div class="col-md-12">
                             <h4 class="widget-title" id="webGL">Try the Demo</h4>
-                            <p>You can test the the visualization methods in a WebGL application created with Unity in the browser. You can change between the methods and rotate the vessel to take a better look from other perspectives.</p>
+                            <p>You can test the visualization methods in a WebGL application created with Unity in the browser. You can change between the methods and rotate the vessel to take a better look from other perspectives.</p>
                             <p> <br /></p>
                             <center><a href="vesselApp.html" class="button"><div id="unity-webgl-logo"></div>Try the demo</a></center>
                         </div>
@@ -306,7 +302,17 @@
 <hr>
 <div class="row" id="footer">
     <div class="col-md-12 text-center">
-        <p class="copyright-text">Felix Merkl | f.merkl@tum.de</p>
+        <p class="copyright-text">Felix Merkl | <script>
+
+                                                    var part1 = "f.merkl";
+                                                    var part2 = Math.pow(2, 6);
+                                                    var part3 = String.fromCharCode(part2);
+                                                    var part4 = "tum.de"
+                                                    var part5 = part1 + String.fromCharCode(part2) + part4;
+                                                    document.write("" + part5);
+
+                                                </script>
+        </p>
     </div>
 </div>
 
