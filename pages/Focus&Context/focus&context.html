@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Felix Merkl | Focus and Context Methods</title>
+    <meta name="description" content="">
+    <!--
+    Volton Template
+    http://www.templatemo.com/tm-441-volton
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/templatemo-style.css">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="responsive-header visible-xs visible-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="top-section">
+                        <!--<div class="profile-image">
+        <img src="../../img/profile.jpg" alt="Felix Merkl">
+    </div>-->
+                        <div class="profile-content">
+                            <h3 class="profile-title">Felix Merkl</h3>
+                            <p class="profile-description">research assistant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="../../index.html" class="toggle-menu">Back</a>
+            <div class="main-navigation responsive-menu">
+                <ul class="navigation">
+                    <li><a href="../../index.html"><i class="fa fa-home"></i>Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-menu hidden-xs hidden-sm">
+        <div class="top-section">
+            <!--<div class="profile-image">
+        <img src="../../img/profile.jpg" alt="Felix Merkl">
+    </div>-->
+            <h3 class="profile-title">Felix Merkl</h3>
+            <p class="profile-description">research assistent</p>
+        </div> <!-- top-section -->
+        <div class="main-navigation">
+            <ul class="navigation">
+                <li><a href="../../index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#pq">pq method</a></li>
+                <li><a href="#window">Window method</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="f&cApp.html"><div id="unity-webgl-logo"></div>Try the demo</a></li>
+
+            </ul>
+        </div> <!-- .main-navigation -->
+    </div> <!-- .sidebar-menu -->
+
+
+    <div class="banner-mine" id="top">
+        <div class="banner-overlay"></div>
+        <div class="welcome-text">
+            <h2>Felix Merkl | Blending augmentations with the real world</h2>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="fluid-container">
+
+            <div class="content-wrapper">
+
+                <!-- ABOUT -->
+                <div class="page-section" id="about">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <center><h4 class="widget-title" style="color:red"><font size="+3">Graphical Content Warning</font></h4></center>
+                            <h4 class="widget-title" id="introduction">Focus & Context Methods</h4>
+                            <p>
+                                Visualizations for augmented objects are a well researched field to support medical doctors during laprascopic surgeries. In this kind of surgery, three small incisions are made into the patient's body and a camera and instruments are inserted.
+                                This camera captures images of the area of interest and is the only way for the surgeons to see the operation site.
+                            </p>
+                            <p>
+                                <br />However, the view is very limited, it is very hard to percieve the depth, and blood vessels can be covered by fatty tissue, or organs. This is very dangerous, as accidentally hurting a vessel might cause serious injuries.
+                                Therefore, augmented reality can be used to reveal vulnerable structures.
+                            </p>
+                            <p>
+                                <br />Just placing a virtual vessel on top of the laprascopic image is not enough, as the vessel appears to float above the surface and disrupt the spatial awareness.
+                                Thus, focus and context methods were introduced to blend the virtual world into the real world. They try to let the medical doctors focus on the important areas without occluding objects and losing the context.
+                            </p>
+
+
+                            <div class="row projects-holder">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="project-item">
+                                        <img src="F&CImages/Image.png" alt="">
+                                        <p><center>The image captured by a camera during laprascopic surgery.</center></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="project-item">
+                                        <img src="F&CImages/Image+Vessel.png" alt="">
+                                        <p><center>The virtual vessel is placed on top of the laprascopic image.</center></p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <hr>
+                        </div>
+                    </div> <!-- #about -->
+                </div>
+
+                <!-- PROJECTS -->
+                <div class="page-section">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title" id="pq">pq method</h4>
+                            <p>
+                                The images of a surgery have often many different features whereas the dominant color is mostly red. However, the many strong edges between different types of tissue and small wrinkels give enough contrast. The pq method by Lerotic et al. [1] uses
+                                those features by extracting the edges with a Sobel filter. This image of the feature extraction is called the pq space.
+                            </p>
+
+                            <div class="row projects-holder" style="padding-bottom: 30px">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="project-item">
+                                        <img src="F&CImages/Image.png" alt="">
+                                        <p><center>The image captured by a camera during laprascopic surgery.</center></p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="project-item">
+                                        <img src="F&CImages/pqSpaceBlack.png" alt="">
+                                        <p><center>The pq space of the laprascopic image. The result of the Sobel filter.</center></p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="project-item">
+                                        <img src="F&CImages/pqOverVessel.png" alt="">
+                                        <p><center>The virtual vessel is placed behind the features of the pq space.</center></p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <p style="padding-bottom: 30px">
+                                The pq space can again be merged with the laprascopic image to keep color information. Additionally, the artifacts from tiny color changes are not important for the perception effect. Therefore, a gaussian filter can be used to blur the source image and
+                                small values from the pq space can be omitted by a threshold. Thus, the background is still visible and only prominant features are highlighted and drawn over the vessel to create occlusion cues.
+                            </p>
+                        </div>
+                        <div class="enlargeImage" style="padding-bottom: 30px">
+                            <center><img src="F&CImages/pqHighlight+vessel.png" onclick="enlargeImg(this)"></center>
+                            <center>click the image to enlarge</center>
+                        </div>
+
+
+
+
+
+                        <div class="col-md-12">
+                            <h4 class="widget-title" id="window">window effect</h4>
+                            <p style="padding-bottom: 30px">
+                                A very common focus and context method is to us a virtual window to achieve a see-through effect for occluded objects - for example used by Bichlmeier et al. This shifts the focus onto the virtual objects.
+                                However, by removing the parts in front of the augmented objects, important features of the real world are missing, too.
+                            </p>
+                        </div>
+
+                        <div class="row projects-holder" style="padding-bottom: 30px">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="project-item">
+                                    <img src="F&CImages/HardWindow+vessel.png" alt="">
+                                    <p><center>A window with sharp edges to seperate virtual objects and the real camera image.</center></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="project-item">
+                                    <img src="F&CImages/SmoothWindow+vessel.png" alt="">
+                                    <p><center>A window with a smooth transition between real and virtual world.</center></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <h4 class="widget-title" id="conclusion">Conclusion</h4>
+                            <p style="padding-bottom: 30px">
+                                Both focus and context methods blend virtual objects with the real world however, they shift the focus on different features. The window method gives a clear view onto virtual objects by cutting information of the real world. Whereas the pq method
+                                tries to keep the most important features of the patient's body and slightly occludes the augmented object.
+                            </p>
+                            <p style="padding-bottom: 30px">
+                                A combination of those techniques is therefore very common [1]. The extracted features of the laprascopic image can be drawn on top of the augmented object and the window.
+                            </p>
+                        </div>
+                        <div class="enlargeImage">
+                            <center><img src="F&CImages/SmoothWindow+vessel+highlight.png" onclick="enlargeImg(this)"></center>
+                            <center>click the image to enlarge</center>
+                        </div>
+                        <div class="col-md-12">
+                            <p style="padding-bottom: 30px">
+                                As some features of the pq space are cut, they can be added into the background of the window without occluding the virtual object.
+                            </p>
+                        </div>
+                        <div class="enlargeImage">
+                            <center><img src="F&CImages/SmoothWindow+vessel+highlight+pqbackground.png" onclick="enlargeImg(this)"></center>
+                            <center>click the image to enlarge</center>
+                        </div>
+
+
+
+
+                        <div class="col-md-12">
+                            <h4 class="widget-title" id="webGL">Try the Demo</h4>
+                            <p>You can test the pq and window methods in a WebGL application created with Unity in the browser. You can try different backgrounds, change colors, transparency, and some parameters.</p>
+                            <p> <br /></p>
+                            <center><a href="f&cApp.html" class="button"><div id="unity-webgl-logo"></div>Try the demo</a></center>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <hr />
+
+                <div class="page-section" id="references">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">References</h4>
+
+                            <div class="csl-bib-body" style="line-height: 1.35; ">
+
+
+                                <div class="csl-entry" style="clear: left; ">
+                                    <div class="csl-left-margin" style="float: left; padding-right: 0.5em;text-align: right; width: 1em;">[1]</div><div class="csl-right-inline" style="margin: 0 .4em 0 1.5em;">
+                                        M. Lerotic, A. J. Chung, G. Mylonas, and G.-Z. Yang,
+                                        ‘pq-space Based Non-Photorealistic Rendering for Augmented Reality’, in <i>Medical Image Computing and Computer-Assisted Intervention – MICCAI 2007</i>,
+                                        vol. 4792, N. Ayache, S. Ourselin, and A. Maeder, Eds. Berlin, Heidelberg: Springer Berlin Heidelberg, 2007, pp. 102–109. doi: <a href="https://doi.org/10.1007/978-3-540-75759-7_13" target="_blank">10.1007/978-3-540-75759-7_13</a>.
+                                    </div>
+                                </div>
+                                <span class="Z3988" title="Lerotic et al."></span>
+
+
+                                <div class="csl-entry" style="clear: left; ">
+                                    <div class="csl-left-margin" style="float: left; padding-right: 0.5em;text-align: right; width: 1em;">[2]</div><div class="csl-right-inline" style="margin: 0 .4em 0 1.5em;">C. Bichlmeier, T. Sielhorst, S. M. Heining, and N. Navab,
+                                    ‘Improving Depth Perception in Medical AR’, in <i>Bildverarbeitung für die Medizin 2007</i>, A. Horsch, T. M. Deserno, H. Handels, H.-P. Meinzer, and T. Tolxdorff, Eds. Berlin, Heidelberg: Springer Berlin Heidelberg, 2007, pp. 217–221. doi:
+                                    <a href="https://doi.org/10.1007/978-3-540-71091-2_44">10.1007/978-3-540-71091-2_44</a>.</div>
+                                </div>
+                                <span class="Z3988" title="Bichlmeier et al."></span>
+
+
+                            </div>
+                    </div> <!-- #about -->
+                </div>
+
+            </div>
+<hr>
+<div class="row" id="footer">
+    <div class="col-md-12 text-center">
+        <p class="copyright-text">Felix Merkl | <script>
+
+                                                    var part1 = "f.merkl";
+                                                    var part2 = Math.pow(2, 6);
+                                                    var part3 = String.fromCharCode(part2);
+                                                    var part4 = "tum.de"
+                                                    var part5 = part1 + String.fromCharCode(part2) + part4;
+                                                    document.write("" + part5);
+
+                                                </script>
+        </p>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/min/plugins.min.js"></script>
+<script src="js/min/main.min.js"></script>
+<script>
+    function enlargeImg(img) {
+        img.style.transform = "scale(2)";
+        img.style.transition = "transform 0.25s ease";
+        img.onclick = function () { normalImg(img) };
+    }
+</script>
+
+<script>
+    function normalImg(img) {
+        img.style.transform = "scale(1)";
+        img.style.transition = "transform 0.25s ease";
+        img.onclick = function () { enlargeImg(img) };
+    }
+</script>
+
+</body>
+</html>

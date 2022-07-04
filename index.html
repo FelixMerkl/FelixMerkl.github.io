@@ -48,6 +48,7 @@
                     <li><a href="#top"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="#about"><i class="fa fa-user"></i>About Me</a></li>
                     <li><a href="#knownVis"><i class="fa fa-newspaper-o"></i>Visualization methods</a></li>
+                    <li><a href="#focusContext"><i class="fa fa-newspaper-o"></i>Focus & context methods</a></li>
                     <li><a href="#contact"><i class="fa fa-user"></i>Contact</a></li>
                 </ul>
             </div>
@@ -68,6 +69,7 @@
                 <li><a href="#top"><i class="fa fa-globe"></i>Welcome</a></li>
                 <li><a href="#about"><i class="fa fa-pencil"></i>About Me</a></li>
                 <li><a href="#knownVis"><i class="fa fa-paperclip"></i>Visualizations</a></li>
+                <li><a href="#focusContext"><i class="fa fa-paperclip"></i>Focus & context methods</a></li>
                 <li><a href="#contact"><i class="fa fa-user"></i>Contact</a></li>
             </ul>
         </div> <!-- .main-navigation -->
@@ -99,11 +101,11 @@
                         <div class="col-md-12">
                             <h4 class="widget-title">Learn About Me</h4>
                             <!--<div class="about-image">
-                                <img src="img/8.jpg" alt="about me">
-                            </div> -->
+                    <img src="img/8.jpg" alt="about me">
+                </div> -->
                             <p>
                                 Currently, I am working at the TUM (Technische Universität München) as research assistant. In my Master's Thesis, I created new visualization techniques for medical augmented reality applications.
-                                They focus on improving depth and shape perception for medical doctors during a minimal invasive surgery by enhacing features of the vessel. For evaluation, the techniques are compared to <a href="#knownVis" rel="nofollow">state-of-the-art visualization techniques</a>.
+                                They focus on improving depth and shape perception for medical doctors during a minimal invasive surgery by enhacing features of the vessel. For evaluation, the techniques are compared to <a href="#knownVis" rel="nofollow">state-of-the-art visualization techniques</a>. 
                             </p>
                             <p>
                                 <br />A small prestudy indicated promising effects and therefore, I have the opportunity to keep working at the project as research assistant. The goal is to elaborate the study design, conduct an in-depth study, and publish the results in a scientific paper.
@@ -111,7 +113,8 @@
                             </p>
                             <p>
                                 <br />The resulting system has five different visualizations implemented: three state-of-the-art methods and two own created. The system is used during a laprascopic surgery. It takes the camera image, tracking data from the patient and instrument, and creates an augmented reality
-                                with a real-world surgery image and correctly placed virtual vessels. These vessels are rendered with a visualization method that the surgeons can select.
+                                with a real-world surgery image and correctly placed virtual vessels. These vessels are rendered with a visualization method that the surgeons can select. To simulate an applicable laprascopic surgery, <a href="#focusContext" rel="nofollow">focus and context</a> are used to 
+                                blend the real world with the augmentations.
                             </p>
 
                             <hr>
@@ -230,23 +233,75 @@
                     </div> <!-- .projects-holder -->
                 </div>
                 <hr>
+
+                <div class="page-section" id="focusContext">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Blending augmentations with the real world</h4>
+                            <p>
+                                The key in mixing virtual objects into the real world is occlusion. It is a very strong cue which gives medical doctors spacial awareness. This can also be misleading, when virtual objects are placed on top of the real world when in reality it is the other way round. 
+                                Therefore, focus and context methods are used to show the order of objects with additional occlusion cues. 
+                            </p>
+                            <p>
+                                <br />
+                                <a href="pages/Focus&Context/focus&context.html" title="Learn more">Learn more</a> about the functionality and implementation of the most common techniques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row projects-holder">
+
+                        <div class="col-md-6 col-sm-6">
+                            <div class="project-item">
+                                <img src="pages/Focus&Context/F&CImages/pqHighlight+vessel.png" alt="">
+                                <div class="project-hover">
+                                    <a href="pages/Focus&Context/focus&context.html#pq" class="project-hover" title="Learn More">
+                                        <div class="inside">
+                                            <h5>pq edge effect</h5>
+                                            <p>The most important features are extracted and placed on top of the background and augmented object to add occlusion.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6">
+                            <div class="project-item">
+                                <img src="pages/Focus&Context/F&CImages/HardWindow+vessel.png" alt="">
+                                <div class="project-hover">
+                                    <a href="pages/Focus&Context/focus&context.html#window" class="project-hover" title="Learn More">
+                                        <div class="inside">
+                                            <h5>Window effect</h5>
+                                            <p>Parts of the background are removed to create a see-through effect onto augmented objects.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <hr />
+
                 <!-- Contact -->
                 <div class="page-section" id="contact">
                     <div class="row">
                         <div class="col-md-12">
                             <h4 class="widget-title">Contact Infos</h4>
-                            
-                                <script>
-                                   
-                                        var part1 = "f.merkl";
-                                        var part2 = Math.pow(2, 6);
-                                        var part3 = String.fromCharCode(part2);
-                                        var part4 = "tum.de"
-                                        var part5 = part1 + String.fromCharCode(part2) + part4;
-                                        document.write("<a href=" + "mai" + "lto" + ":" + part5 + " > " + part1 + part3 + part4 + "</a >");
-                                           
-                                </script>
-                            
+
+                            <script>
+
+                                var part1 = "f.merkl";
+                                var part2 = Math.pow(2, 6);
+                                var part3 = String.fromCharCode(part2);
+                                var part4 = "tum.de"
+                                var part5 = part1 + String.fromCharCode(part2) + part4;
+                                document.write("<a href=" + "mai" + "lto" + ":" + part5 + " > " + part1 + part3 + part4 + "</a >");
+
+                            </script>
+
                             <p>LinkedIn: <a href="https://www.linkedin.com/in/felix-merkl/" target="_blank" title="LinkedIn profile">Felix Merkl</a></p>
                         </div>
                     </div> <!-- #about -->
@@ -255,16 +310,19 @@
 
                 <div class="row" id="footer">
                     <div class="col-md-12 text-center">
-                        <p class="copyright-text">Felix Merkl | <script>
+                        <p class="copyright-text">
+                            Felix Merkl |
+                            <script>
 
-                                                                    var part1 = "f.merkl";
-                                                                    var part2 = Math.pow(2, 6);
-                                                                    var part3 = String.fromCharCode(part2);
-                                                                    var part4 = "tum.de"
-                                                                    var part5 = part1 + String.fromCharCode(part2) + part4;
-                                                                    document.write("" + part5 );
+                                var part1 = "f.merkl";
+                                var part2 = Math.pow(2, 6);
+                                var part3 = String.fromCharCode(part2);
+                                var part4 = "tum.de"
+                                var part5 = part1 + String.fromCharCode(part2) + part4;
+                                document.write("" + part5);
 
-                                                                </script></p>
+                            </script>
+                        </p>
                     </div>
                 </div>
 
