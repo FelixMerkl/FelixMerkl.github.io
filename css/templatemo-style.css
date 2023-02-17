@@ -357,6 +357,33 @@ h3.profile-title {
   background: #495461;
 }
 
+.sub-navigation {
+  margin: 0px 0;
+}
+.sub-navigation li {
+  display: block;
+}
+.sub-navigation li a {
+  padding: 10px 40px;
+  padding-left: 75px;
+  display: block;
+  color: white;
+  font-size: 14px;
+}
+.sub-navigation li a i {
+  margin-right: 15px;
+  font-size: 24px;
+}
+.sub-navigation li a:hover {
+  background: #5b6878;
+}
+.sub-navigation li a.active {
+  background: #495461;
+}
+.sub-navigation li a.active:hover {
+  background: #495461;
+}
+
 .social-icons {
   display: block;
   padding: 30px 40px;
@@ -524,6 +551,22 @@ h3.profile-title {
   visibility: visible;
 }
 
+.project-video {
+  width: 100%;
+  margin-bottom: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.project-video video {
+  width: 100%;
+  display: block;
+}
+.project-video:hover .project-hover {
+  top: 0;
+  opacity: .8;
+  visibility: visible;
+}
+
 
 
 .project-hover {
@@ -597,6 +640,32 @@ h3.profile-title {
     z-index: 3;
 }
 
+/*------ enlargeVideo ------ */
+.enlargeVideo {
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  /*position: relative;*/
+  position: relative;
+  z-index: 1;
+}
+
+
+.enlargeVideo video {
+  width: 50%;
+  display: block;
+
+}
+
+.enlargeVideo video:hover {
+  border: 1px solid grey;
+}
+
+.enlargeVideo:hover{
+  z-index: 3;
+}
 
 /*------ contact ------ */
 .contact-form {

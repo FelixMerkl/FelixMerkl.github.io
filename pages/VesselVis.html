@@ -65,14 +65,26 @@
         <div class="main-navigation">
             <ul class="navigation">
                 <li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#basicShade">Basic Shading</a></li>
-                <li><a href="#Wireframe">Wire frame model</a></li>
-                <li><a href="#Fresnel">Fresnel</a></li>
-                <li><a href="#Fog">Fog</a></li>
-                <li><a href="#Chromadepth">Chromadepth</a></li>
-                <li><a href="#Outline">Outline</a></li>
-                <li><a href="#Hatching">Hatching</a></li>
-                <li><a href="#Projection">Shadow Projection</a></li>
+                <li><a href="#about">Static Methods</a></li>
+                <div class="sub-navigation">
+                    <ul class="navigation">
+                        <li><a href="#basicShade">Basic Shading</a></li>
+                        <li><a href="#Wireframe">Wire frame model</a></li>
+                        <li><a href="#Fresnel">Fresnel</a></li>
+                        <li><a href="#Fog">Fog</a></li>
+                        <li><a href="#Chromadepth">Chromadepth</a></li>
+                        <li><a href="#Outline">Outline</a></li>
+                        <li><a href="#Hatching">Hatching</a></li>
+                        <li><a href="#Projection">Shadow Projection</a></li>
+                    </ul>
+                </div>
+                <li><a href="#dynamic">Dynamic Methods</a></li>
+                <div class="sub-navigation">
+                    <ul class="navigation">
+                        <li><a href="#objectFlow">Object Flow</a></li>
+                        <li><a href="#wave">Wave Propagation</a></li>
+                    </ul>
+                </div>
                 <li><a href="#references">References</a></li>
                 <li><a href="vesselApp.html"><div id="unity-webgl-logo"></div>Try the demo</a></li>
 
@@ -208,7 +220,7 @@
                             </p>
                         </div>
                         <div class="enlargeImage">
-                            <center><img src="../img/Hatching_Black.png" onclick="enlargeImg(this)"></center>
+                            <center><img src="../img/Hatching_Black2.png" onclick="enlargeImg(this)"></center>
                         </div>
 
 
@@ -234,16 +246,72 @@
 
                         </div>
                         <div class="enlargeImage">
-                            <center><img src="../img/Hatching_Color.png" onclick="enlargeImg(this)" alt="Chromadepth combined with Hatches."></center>
+                            <center><img src="../img/Hatching_Color2.png" onclick="enlargeImg(this)" alt="Chromadepth combined with Hatches."></center>
                         </div>
                         <div class="enlargeImage">
                             <center><img src="../img/Projection.png" onclick="enlargeImg(this)" alt="Chromadepth combined with projection."></center>
                         </div>
 
+                    </div>
+                </div>
+                <hr />
+
+                <div class="page-section" id="dynamic">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Dynamic vessel visualizations</h4>
+                            <p>
+                                The state-of-the-art techniques cover many different aspects for depth and shape cues. However, they do not
+                                utalize motion cues. The change of perspective gives a good understanding of the objects' shape and effects like motion parallax
+                                help to perceive depth. 
+                            </p>
+                            <p>
+                                <br />The results of a study show a good performance for the dynamic methods but not significantly better then most state-of-the-art techniques. 
+                                The participants especially favoured them in subjective questionnaires.
+                            </p>
+                            <p>
+                                <br />Naturally, the dynamic aspect is not limited to blood vessels, however, the object flow methods works best on tubular structures. Therefore, blood vessels are the perfect application.
+                                You can test the visualization methods in a WebGL application <a href="vesselApp.html" title="try the demo">here</a>.
+                            </p>
+                            <hr>
+                        </div>
+                    </div> <!-- #about -->
+                </div>
+
+                <!-- PROJECTS -->
+                <div class="page-section">
+                    <div class="row">
+                        
+                        <div class="col-md-12">
+                            <h4 class="widget-title" id="objectFlow">Object Flow</h4>
+                            <p>
+                                The object flow method is a dynamic illustrative visualization technique that propagates auxilliary objects through an object along a set path.
+                                This path can be the centerline (skeleton) of the object and can also be displayed as additional perception cue. 
+                                The flowing objects should indicate the direction and the distance. We achieve this by using different colors for the front and the back. 
+                                As distant objects appear smaller then near objects, the distance can be estimated by comparing the sizes. However, it is also possible to add chromadepth to distinguish the depth.
+                            </p>
+                        </div>
+                        <div class="enlargeVideo">
+                            <center><video width=100% height=100% autoplay loop src="../img/objectFlow.mp4" onclick="enlargeVideo(this)"></video></center>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <h4 class="widget-title" id="wave">Wave Propagation</h4>
+                            <p>
+                                The wave propagation method is a dynamic illustrative visualization method that animates view-dependent feature lines (grid lines) combined with chromadepth.
+                                The feature lines use a trail to cover a larger area. By moving the waves along the view direction at a constant speed, every part of the vessel will be emphasized. 
+                                Chromadepth provides cues for depth perception.
+                            </p>
+                        </div>
+                        <div class="enlargeVideo">
+                            <center><video width=100% height=100% autoplay loop src="../img/wave.mp4" onclick="enlargeVideo(this)"></video></center>
+                        </div>
+
 
                         <div class="col-md-12">
                             <h4 class="widget-title" id="webGL">Try the Demo</h4>
-                            <p>You can test the visualization methods in a WebGL application created with Unity in the browser. You can change between the methods and rotate the vessel to take a better look from other perspectives.</p>
+                            <p>You can test the mentioned visualization methods in a WebGL application created with Unity in the browser. You can change between the methods and rotate the vessel to take a better look from other perspectives.</p>
                             <p> <br /></p>
                             <center><a href="vesselApp.html" class="button"><div id="unity-webgl-logo"></div>Try the demo</a></center>
                         </div>
@@ -336,6 +404,21 @@
         img.style.transform = "scale(1)";
         img.style.transition = "transform 0.25s ease";
         img.onclick = function () { enlargeImg(img) };
+    }
+</script>
+<script>
+    function enlargeVideo(video) {
+        video.style.transform = "scale(2)";
+        video.style.transition = "transform 0.25s ease";
+        video.onclick = function () { normalImg(video) };
+    }
+</script>
+
+<script>
+    function normalVideo(video) {
+        video.style.transform = "scale(1)";
+        video.style.transition = "transform 0.25s ease";
+        video.onclick = function () { enlargeImg(video) };
     }
 </script>
 
