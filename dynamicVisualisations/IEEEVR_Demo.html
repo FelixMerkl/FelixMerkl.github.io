@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | IEEEVR Demo</title>
+    <title>IEEEVR Demo</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">ISMAR Demo</div>
+        <div id="unity-build-title">IEEEVR Demo</div>
       </div>
     </div>
     <script>
@@ -56,15 +56,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/ISMAR Demo.loader.js";
+      var loaderUrl = buildUrl + "/IEEEVR Demo.loader.js";
       var config = {
-        dataUrl: buildUrl + "/ISMAR Demo.data.unityweb",
-        frameworkUrl: buildUrl + "/ISMAR Demo.framework.js.unityweb",
-        codeUrl: buildUrl + "/ISMAR Demo.wasm.unityweb",
-        symbolsUrl: buildUrl + "/ISMAR Demo.symbols.json.unityweb",
+        dataUrl: buildUrl + "/IEEEVR Demo.data.unityweb",
+        frameworkUrl: buildUrl + "/IEEEVR Demo.framework.js.unityweb",
+        codeUrl: buildUrl + "/IEEEVR Demo.wasm.unityweb",
+        symbolsUrl: buildUrl + "/IEEEVR Demo.symbols.json.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "TUM",
-        productName: "ISAMR Demo",
+        productName: "IEEEVR Demo",
         productVersion: "1.0",
         showBanner: unityShowBanner,
       };
@@ -90,12 +90,15 @@
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
 
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+
         //unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1280px";
-        canvas.style.height = "720px";
+        //canvas.style.width = "1280px";
+        //canvas.style.height = "720px";
       }
 
       loadingBar.style.display = "block";
